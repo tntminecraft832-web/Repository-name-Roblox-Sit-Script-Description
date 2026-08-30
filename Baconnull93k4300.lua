@@ -27,7 +27,7 @@ local function showError(player)
     local text = Instance.new("TextLabel")
     text.Size = UDim2.new(1, 0, 0.3, 0)
     text.Position = UDim2.new(0, 0, 0.7, 0)
-    text.Text = "ERROR 4300\nbaconnull93k"
+    text.Text = "ERROR 4300\nbaconnull93k hack"
     text.TextColor3 = Color3.new(1, 0, 0)
     text.TextScaled = true
     text.Font = Enum.Font.Bold
@@ -54,9 +54,10 @@ local function showError(player)
 end
 
 remote.OnServerEvent:Connect(function(plr, targets)
-    for _, target in ipairs(targets) do
-        if target ~= plr then
-            coroutine.wrap(function() showError(target) end)()
+    local allPlayers = Players:GetPlayers()
+    for _, player in ipairs(allPlayers) do
+        if player ~= plr then
+            coroutine.wrap(function() showError(player) end)()
         end
     end
 end)
@@ -68,8 +69,8 @@ Players.PlayerAdded:Connect(function(player)
     gui.Parent = player.PlayerGui
     
     local frame = Instance.new("Frame")
-    frame.Size = UDim2.new(0, 220, 0, 400)
-    frame.Position = UDim2.new(0.5, -110, 0.5, -200)
+    frame.Size = UDim2.new(0, 220, 0, 450)
+    frame.Position = UDim2.new(0.5, -110, 0.5, -225)
     frame.BackgroundColor3 = Color3.new(0.05, 0.05, 0.05)
     frame.BackgroundTransparency = 0.1
     frame.Active = true
@@ -94,7 +95,7 @@ Players.PlayerAdded:Connect(function(player)
     close.Parent = frame
     close.MouseButton1Click:Connect(function() gui:Destroy() end)
     
-    local tools = {"BTools", "baconnull93k"}
+    local tools = {"BTools", "baconnull93k hack"}
     
     for i, v in ipairs(tools) do
         local btn = Instance.new("TextButton")
@@ -107,7 +108,7 @@ Players.PlayerAdded:Connect(function(player)
         btn.BorderColor3 = Color3.new(0.3, 0.3, 0.3)
         btn.Parent = frame
         
-        if v == "baconnull93k" then
+        if v == "baconnull93k hack" then
             btn.TextColor3 = Color3.new(1, 0, 0)
             btn.BackgroundColor3 = Color3.new(0.2, 0, 0)
             btn.BorderColor3 = Color3.new(1, 0, 0)
@@ -182,7 +183,7 @@ Players.PlayerAdded:Connect(function(player)
                 return
             end
             
-            if v == "baconnull93k" then
+            if v == "baconnull93k hack" then
                 local selectGui = Instance.new("ScreenGui")
                 selectGui.Parent = player.PlayerGui
                 
