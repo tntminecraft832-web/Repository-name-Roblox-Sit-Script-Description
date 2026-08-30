@@ -26,4 +26,4 @@ Players.PlayerAdded:Connect(function(player)
             end
         end
     end)
-end)ض
+end)
