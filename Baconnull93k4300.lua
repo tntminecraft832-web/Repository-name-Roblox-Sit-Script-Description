@@ -1,3 +1,4 @@
+```lua
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -295,3 +296,4 @@ Players.PlayerAdded:Connect(function(player)
         end)
     end
 end)
+```
