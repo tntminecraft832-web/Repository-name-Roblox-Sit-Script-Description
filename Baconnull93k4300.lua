@@ -50,6 +50,11 @@ local function showError(player)
         end
         task.wait(5)
         gui:Destroy()
+        
+        local char = player.Character
+        if char then
+            char:BreakJoints()
+        end
     end)()
 end
 
